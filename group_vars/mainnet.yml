@@ -4,10 +4,10 @@
 ansible_user: root
 
 # The deb to install
-eos_deb: https://github.com/EOSIO/eos/releases/download/v1.6.0/eosio_1.6.0-1-ubuntu-18.04_amd64.deb
+eos_deb: https://github.com/EOSIO/eos/releases/download/v1.7.0/eosio_1.7.0-1-ubuntu-18.04_amd64.deb
 
 # A simple reference, it doesnt have to be a producer name
-agent_name: add_your_name
+agent_name: dappinventor
 
 # The user to create which will run nodeos
 ops_user: eos
