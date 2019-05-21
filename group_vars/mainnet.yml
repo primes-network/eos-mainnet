@@ -13,7 +13,8 @@ agent_name: dappinventor
 ops_user: eos
 
 # Override the default install locations
-mainnet_install_dir: /opt/mainnet
+mainnet_install_dir: /data/eos/mainnet
+snap_download_dir: /snap-download/blocks
 
 # Use these settings for non standard ssh port and/or ssh key
 # ansible_ssh_private_key_file: ~/.ssh/key.pem

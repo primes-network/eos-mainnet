@@ -1,7 +1,10 @@
 #!/bin/bash
 
 cd {{ mainnet_install_dir }}
-wget $(wget --quiet "https://eosnode.tools/api/blocks?limit=1" -O- | jq -r '.data[0].s3') -O blocks_backup.tar.gz
 /bin/bash stop.sh
 rm -rf blocks state
-tar xvzf blocks_backup.tar.gz
+
+cd {{ snap_download_dir }}
+wget $(wget --quiet "https://eosnode.tools/api/blocks?limit=1" -O- | jq -r '.data[0].s3') -O blocks_backup.tar.gz
+#wget https://s3.wasabisys.com/eosnode.tools/snapshots/snap_2019-05-20-02-00.tar.gz -O blocks_backup.tar.gz
+tar xvzf blocks_backup.tar.gz -C {{ mainnet_install_dir }} 
